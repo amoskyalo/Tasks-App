@@ -1,37 +1,18 @@
+.spin{
+    text-align: center;
+    margin-top: 9rem;
+}
 
-.load div{
-    height: 50px;
-    width: 50px;
-    background-color: green;
-    position: relative;
-    animation: load;
+.spinner{
+    color: red;
+    font-size: 100px;
+    animation: spin;
     animation-duration: 5s;
-    animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
-@keyframes load{
+@keyframes spin{
     0%{
-        left: 0px;
-        border-radius: 50px 0px 0px 0px;
-    }
-    25%{
-        left: 300px;
-        border-radius: 50px 50px 0px 0px;
-    }
-    50%{
-        top: 300px;
-        left: 0;
-        border-radius: 50px 50px 50px 0px;
-    }
-    75%{
-        top: 300px;
-        left: 0;
-        border-radius: 50px 50px 50px 0px;
-    }
-    100%{
-        top: 0;
-        left: 0;
-        border-radius: 50px 50px 50px 50px;
+        transform: rotate(-360deg);
     }
 }

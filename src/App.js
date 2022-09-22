@@ -5,6 +5,7 @@ import Tasks from './Components/Tasks/Tasks';
 import Addtask from './Components/AddTask/Addtask';
 import Landing from './Components/Loading/Landing';
 
+
 function App() {
   //setting state fo the events
   const [tasks, setTasks] = useState([]);
