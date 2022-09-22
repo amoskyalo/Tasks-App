@@ -1,7 +1,7 @@
 import React from 'react'
-import { FaTimes } from 'react-icons/fa'
 import './Task.css'
 import Button from '../Buttons/Button'
+import {FaTimes} from 'react-icons/fa'
 
 const Task = ( {task, onDelete, setReminder} ) => {
   return (
