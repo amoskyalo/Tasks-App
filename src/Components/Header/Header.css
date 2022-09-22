@@ -1,0 +1,16 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid green;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+.btn{
+    height: fit-content;
+    border: none;
+    padding: 10px 16px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 8px;
+}

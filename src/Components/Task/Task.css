@@ -1,0 +1,18 @@
+.task{
+    background-color: #eee;
+    padding: 8px;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.delete{
+    color: red;
+    cursor: pointer;
+}
+.reminder{
+    border-left: 5px solid red;
+}

@@ -1,0 +1,36 @@
+form{
+    position: relative;
+}
+label{
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+}
+input[type="text"]{
+    min-width: 95%;
+    max-width: 95%;
+    padding: 16px 8px;
+    margin:  0.7rem 0;
+    border: 1px solid #000;
+    outline: none;
+    border-radius: 5px;
+}
+input::placeholder{
+    font-size: 18px;
+}
+input[type="checkbox"]{
+    float: right;
+    margin-top: 0.7rem;
+    margin:  0.7rem 0;
+}
+input[type="Submit"]{
+    background-color: green;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 16px 0px;
+    margin:  0.7rem 0;
+    border-radius: 5px;
+}
+
