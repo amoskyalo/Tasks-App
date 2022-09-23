@@ -9,8 +9,8 @@ const Task = ( {task, onDelete, setReminder, addFavTask} ) => {
     <div className={`task ${task.reminder ? `reminder` : " "}`}>
         <h2 className='header'>{task.text} <MdDelete className='delete' onClick={() => onDelete(task.id)} /></h2>
         <p>{task.day}</p>
-        {!task.reminder ? <Button className ="btn" color="green" text="Add reminder" clickFunc={()=>setReminder(task.id)} /> :
-        <Button  className="btn" color="green" text="Remove reminder" clickFunc={()=>setReminder(task.id)} />}
+        {!task.reminder ? <Button className ="button" color="green" text="Add reminder" clickFunc={()=>setReminder(task.id)} /> :
+        <Button  className="button" color="green" text="Remove reminder" clickFunc={()=>setReminder(task.id)} />}
         <AiFillStar onClick={()=>addFavTask(task.id)} className ="cart"/>
     </div>
   )

@@ -32,7 +32,7 @@ const Addtask = ( {onAdd, removeForm} ) => {
         onChange ={(e)=> setTask(e.target.value)}/>
 
         <label>Day and Time</label>
-        <input type="text" placeholder="Add day and time" value={day}
+        <input type="date" placeholder="Add day and time" value={day}
         onChange={(e)=> setDay(e.target.value)}/>
 
         <label>Set reminder</label>

@@ -2,21 +2,21 @@ form{
     position: relative;
 }
 label{
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     font-style: italic;
 }
-input[type="text"]{
+input[type="text"], input[type="date"]{
     min-width: 95%;
     max-width: 95%;
-    padding: 16px 8px;
+    padding: 8px 8px;
     margin:  0.7rem 0;
     border: 1px solid #000;
     outline: none;
     border-radius: 5px;
 }
 input::placeholder{
-    font-size: 18px;
+    font-size: 15px;
 }
 input[type="checkbox"]{
     float: right;
@@ -29,7 +29,7 @@ input[type="Submit"]{
     color: #fff;
     border: none;
     width: 100%;
-    padding: 16px 0px;
+    padding: 8px 0px;
     margin:  0.7rem 0;
     border-radius: 5px;
 }
