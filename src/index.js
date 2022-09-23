@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import Footer from './Components/Footer/Footer';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,9 +12,6 @@ root.render(
   </React.StrictMode>
 );
 
-// const footer = ReactDOM.createRoot(document.getElementById('footer'));
-// footer.render(
-//   <Footer />
-// )
+serviceWorkerRegistration.register();
 
 reportWebVitals();
