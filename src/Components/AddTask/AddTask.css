@@ -2,14 +2,14 @@ form{
     position: relative;
 }
 label{
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700;
     font-style: italic;
 }
 input[type="text"], input[type="date"]{
     min-width: 95%;
     max-width: 95%;
-    padding: 8px 8px;
+    padding: 16px 8px;
     margin:  0.7rem 0;
     border: 1px solid #000;
     outline: none;
@@ -29,7 +29,7 @@ input[type="Submit"]{
     color: #fff;
     border: none;
     width: 100%;
-    padding: 8px 0px;
+    padding: 16px 0px;
     margin:  0.7rem 0;
     border-radius: 5px;
 }
