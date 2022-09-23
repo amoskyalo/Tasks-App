@@ -1,11 +1,15 @@
 import React from 'react'
 import './Counter.css'
 
-const Counter = ( {count} ) => {
+const Counter = ( {favTasks} ) => {
   return (
     <div className='count'>
-        <h2>Important:</h2>
-        <p>{count}</p>
+        <h2>Favorite Tasks</h2>
+        {favTasks.map( (favTask) => (
+            <ul>
+                <li key={favTask.id}>{favTask.text}</li>
+            </ul>
+        ))}
     </div>
   )
 }

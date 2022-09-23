@@ -9,16 +9,32 @@ import Counter from './Components/Counter/Counter';
 
 function App() {
   //setting state fo the events
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([
+    // {
+    //   id: 1,
+    //   text: "Cooking",
+    //   day: "Monday 26th 2022",
+    //   reminder: false
+    // },
+    // {
+    //   id: 2,
+    //   text: "Video gaming",
+    //   day: "Monday 26th 2022",
+    //   reminder: false
+    // },
+    // {
+    //   id: 4,
+    //   text: "Running",
+    //   day: "Monday 26th 2022",
+    //   reminder: false
+    // }
+  ]);
 
-  //counter
-  let [counter, setCounter] = useState(0);
-  const addCart = () =>{
-    console.log("Logging", counter);
-    setCounter(counter + 1);
+  //setting up favorite tasks
+  const [favTask, setFavTask] = useState([]);
+  const addFavTask = (id) =>{
+    tasks.map( (task) => task.id === id ? setFavTask([...favTask, task]) : "")
   }
-
-
 
   //setting the state of the form
   const [showForm, setForm] = useState(false);
@@ -46,9 +62,10 @@ function App() {
   return (
     <div className='app'>
       <Header  showFunc={()=> setForm(!showForm)} />
-      <Counter count={counter}/>
+      <Counter favTasks={favTask}/>
       {showForm ? <Addtask onAdd={addNewEvent}/> : ''}
-      {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={onDelete} setReminder={setReminder} addCart={addCart} /> : <Landing />}
+      {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={onDelete} setReminder={setReminder}
+      addFavTask={addFavTask} favTask={favTask}/> : <Landing />}
     </div>
   );
 }
