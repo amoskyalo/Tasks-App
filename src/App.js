@@ -73,7 +73,7 @@ function App() {
   return (
     <div className='app'>
       <Header  showFunc={()=> setForm(!showForm)} />
-      <Counter favTasks={favTask} deleteFav={deleteFav}/>
+      {favTask.length > 0 ? <Counter favTasks={favTask} deleteFav={deleteFav}/> : ""}
       {showForm ? <Addtask onAdd={addNewEvent}/> : ''}
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={onDelete} setReminder={setReminder}
       addFavTask={addFavTask} favTask={favTask}/> : <Landing />}
