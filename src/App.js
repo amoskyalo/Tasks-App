@@ -10,30 +10,34 @@ import Counter from './Components/Counter/Counter';
 function App() {
   //setting state fo the events
   const [tasks, setTasks] = useState([
-    // {
-    //   id: 1,
-    //   text: "Cooking",
-    //   day: "Monday 26th 2022",
-    //   reminder: false
-    // },
-    // {
-    //   id: 2,
-    //   text: "Video gaming",
-    //   day: "Monday 26th 2022",
-    //   reminder: false
-    // },
-    // {
-    //   id: 4,
-    //   text: "Running",
-    //   day: "Monday 26th 2022",
-    //   reminder: false
-    // }
+    {
+      id: 1,
+      text: "Cooking",
+      day: "Monday 26th 2022",
+      reminder: false,
+      like: false
+    },
+    {
+      id: 2,
+      text: "Video gaming",
+      day: "Monday 26th 2022",
+      reminder: false,
+      like: false
+    },
+    {
+      id: 4,
+      text: "Running",
+      day: "Monday 26th 2022",
+      reminder: false,
+      like: false
+    }
   ]);
 
   //setting up favorite tasks
   const [favTask, setFavTask] = useState([]);
   const addFavTask = (id) =>{
-    tasks.map( (task) => task.id === id ? setFavTask([...favTask, task]) : "")
+    tasks.map( (task) => task.id === id && !favTask.includes(task) ? 
+    setFavTask([...favTask,task]) : "") 
   }
 
   //setting the state of the form
