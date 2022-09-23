@@ -6,10 +6,26 @@ label{
     font-weight: 700;
     font-style: italic;
 }
-input[type="text"], input[type="date"]{
+label span{
+    color: red;
+    font-size: 16px;
+}
+.time-date{
+    display: flex;
+    justify-content: space-between;
+}
+input[type="date"], input[type="time"]{
+    padding: 8px 8px;
+    margin:  0.7rem 0;
+    border: 1px solid #000;
+    outline: none;
+    border-radius: 5px;
+}
+
+input[type="text"]{
     min-width: 95%;
     max-width: 95%;
-    padding: 16px 8px;
+    padding: 12px 8px;
     margin:  0.7rem 0;
     border: 1px solid #000;
     outline: none;
