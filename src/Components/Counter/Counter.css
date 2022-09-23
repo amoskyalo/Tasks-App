@@ -4,12 +4,26 @@
   overflow: auto;
   position: relative;
   box-shadow: 0 0 3px #000;
-  border-bottom: 3px solid green;
-  border-radius: 0  0 8px 8px;
+  border-bottom: 4px solid green;
+  border-radius: 5px;
 }
 .count h2{
     text-decoration: underline;
     font-size: 18px;
     text-align: center;
     font-style: italic;
+}
+ul{
+  padding: 0 0.5rem;
+}
+
+.fav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+.fav .cancel{
+  color: red;
+  font-size: 20px;
 }

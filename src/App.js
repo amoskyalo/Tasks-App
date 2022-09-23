@@ -10,35 +10,42 @@ import Counter from './Components/Counter/Counter';
 function App() {
   //setting state fo the events
   const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      text: "Cooking",
-      day: "Monday 26th 2022",
-      reminder: false,
-      like: false
-    },
-    {
-      id: 2,
-      text: "Video gaming",
-      day: "Monday 26th 2022",
-      reminder: false,
-      like: false
-    },
-    {
-      id: 4,
-      text: "Running",
-      day: "Monday 26th 2022",
-      reminder: false,
-      like: false
-    }
+    // {
+    //   id: 1,
+    //   text: "Cooking",
+    //   day: "Monday 26th 2022",
+    //   reminder: false,
+    //   like: false
+    // },
+    // {
+    //   id: 2,
+    //   text: "Video gaming",
+    //   day: "Monday 26th 2022",
+    //   reminder: false,
+    //   like: false
+    // },
+    // {
+    //   id: 4,
+    //   text: "Running",
+    //   day: "Monday 26th 2022",
+    //   reminder: false,
+    //   like: false
+    // }
   ]);
 
   //setting up favorite tasks
   const [favTask, setFavTask] = useState([]);
+
   const addFavTask = (id) =>{
-    tasks.map( (task) => task.id === id && !favTask.includes(task) ? 
-    setFavTask([...favTask,task]) : "") 
+    tasks.map( (task) => !favTask.includes(task) && task.id === id ? 
+    setFavTask([...favTask,task]) : alert("Task already added")) 
   }
+
+  //clearing up favorite tasks
+  const deleteFav = (id) =>{
+    setFavTask(favTask.filter( (fav) => fav.id !== id))
+  }
+
 
   //setting the state of the form
   const [showForm, setForm] = useState(false);
@@ -66,7 +73,7 @@ function App() {
   return (
     <div className='app'>
       <Header  showFunc={()=> setForm(!showForm)} />
-      <Counter favTasks={favTask}/>
+      <Counter favTasks={favTask} deleteFav={deleteFav}/>
       {showForm ? <Addtask onAdd={addNewEvent}/> : ''}
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={onDelete} setReminder={setReminder}
       addFavTask={addFavTask} favTask={favTask}/> : <Landing />}
