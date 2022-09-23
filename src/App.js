@@ -38,7 +38,7 @@ function App() {
 
   const addFavTask = (id) =>{
     tasks.map( (task) => !favTask.includes(task) && task.id === id ? 
-    setFavTask([...favTask,task]) : alert("Task already added")) 
+    setFavTask([...favTask,task]) : "") 
   }
 
   //clearing up favorite tasks
@@ -72,9 +72,9 @@ function App() {
 
   return (
     <div className='app'>
-      <Header  showFunc={()=> setForm(!showForm)} />
+      <Header  showFunc={()=> setForm(!showForm)}/>
       {favTask.length > 0 ? <Counter favTasks={favTask} deleteFav={deleteFav}/> : ""}
-      {showForm ? <Addtask onAdd={addNewEvent}/> : ''}
+      {showForm ? <Addtask onAdd={addNewEvent} removeForm={()=> setForm(!showForm)}/> : ''}
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={onDelete} setReminder={setReminder}
       addFavTask={addFavTask} favTask={favTask}/> : <Landing />}
     </div>

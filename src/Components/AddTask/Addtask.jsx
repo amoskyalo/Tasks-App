@@ -2,7 +2,7 @@ import React from 'react'
 import './AddTask.css'
 import { useState } from 'react'
 
-const Addtask = ( {onAdd} ) => {
+const Addtask = ( {onAdd, removeForm} ) => {
     const [text, setTask] = useState("")
     const [day, setDay] = useState("")
     const [reminder, setReminder] = useState(false)
@@ -21,6 +21,8 @@ const Addtask = ( {onAdd} ) => {
       setTask("");
       setDay("")
       setReminder(false);
+
+      removeForm()
     }
 
   return (
