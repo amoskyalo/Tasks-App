@@ -1,0 +1,13 @@
+.count{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.count p{
+    border: 1px solid;
+    width: fit-content;
+    padding: 0rem 3rem;
+    border-radius: 5px;
+    font-size: 20px;
+}

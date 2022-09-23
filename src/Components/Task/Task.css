@@ -12,7 +12,13 @@
 .delete{
     color: red;
     cursor: pointer;
+    font-size: 30px;
 }
 .reminder{
     border-left: 5px solid red;
+}
+.cart{
+   float: right;
+   font-size: 30px;
+   vertical-align: middle;
 }

@@ -4,7 +4,7 @@ header{
     align-items: center;
     border-bottom: 5px solid green;
     border-radius: 5px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 .btn{
     height: fit-content;

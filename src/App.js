@@ -4,11 +4,21 @@ import Header from './Components/Header/Header';
 import Tasks from './Components/Tasks/Tasks';
 import Addtask from './Components/AddTask/Addtask';
 import Landing from './Components/Loading/Landing';
+import Counter from './Components/Counter/Counter';
 
 
 function App() {
   //setting state fo the events
   const [tasks, setTasks] = useState([]);
+
+  //counter
+  let [counter, setCounter] = useState(0);
+  const addCart = () =>{
+    console.log("Logging", counter);
+    setCounter(counter + 1);
+  }
+
+
 
   //setting the state of the form
   const [showForm, setForm] = useState(false);
@@ -36,8 +46,9 @@ function App() {
   return (
     <div className='app'>
       <Header  showFunc={()=> setForm(!showForm)} />
+      <Counter count={counter}/>
       {showForm ? <Addtask onAdd={addNewEvent}/> : ''}
-      {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={onDelete} setReminder={setReminder}/> : <Landing />}
+      {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={onDelete} setReminder={setReminder} addCart={addCart} /> : <Landing />}
     </div>
   );
 }

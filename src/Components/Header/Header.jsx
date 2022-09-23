@@ -6,7 +6,7 @@ const Header = ( {showFunc} ) => {
   return (
     <header>
         <h2>Task Tracker</h2>
-        <Button color="red" text="Add event" clickFunc={showFunc} />
+        <Button className="btn" color="red" text="Add event" clickFunc={showFunc} />
     </header>
   )
 }
