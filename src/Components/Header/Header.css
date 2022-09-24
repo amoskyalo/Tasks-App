@@ -13,12 +13,13 @@ header{
     justify-content: center;
 }
 .logo img{
-    height: 50px;
+    height: 100px;
 }
 .header-icon{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 1rem;
 }
 .icons{
     color: red;
