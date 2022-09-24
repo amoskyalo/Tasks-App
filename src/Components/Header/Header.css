@@ -1,15 +1,19 @@
 header{
+    position: fixed;
+    width: 100%;
+    top: 0;
     border-bottom: 5px solid green;
     border-radius: 5px;
-    margin-bottom: 1rem;
-    padding: 0;
+    z-index: 9;
+    background-color: #ffe4db;
+    padding-top: 0.5rem;
 }
 .logo{
     display: flex;
     justify-content: center;
 }
 .logo img{
-    height: 100px;
+    height: 50px;
 }
 .header-icon{
     display: flex;
