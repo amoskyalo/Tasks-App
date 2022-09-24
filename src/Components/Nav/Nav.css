@@ -70,6 +70,12 @@
     padding: 6px 8px;
     font-size: 15px;
 }
+.num{
+    border: 1px solid;
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+}
 .nav-footer{
     position: absolute;
     bottom: 1rem;

@@ -11,6 +11,7 @@ import Counter from './Components/Counter/Counter';
 function App() {
   //setting up the Nav
   const [showNav, setNav] = useState(false)
+  let [taskLength, setTaskLength] = useState(0)
 
 
   //setting state fo the events
@@ -20,35 +21,30 @@ function App() {
     //   text: "Cooking",
     //   day: "Monday 26th 2022",
     //   reminder: false,
-    //   like: false
     // },
     // {
     //   id: 2,
     //   text: "Video gaming",
     //   day: "Monday 26th 2022",
     //   reminder: false,
-    //   like: false
     // },
     // {
     //   id: 3,
     //   text: "Running",
     //   day: "Monday 26th 2022",
     //   reminder: false,
-    //   like: false
     // },
     // {
     //   id: 4,
     //   text: "Running",
     //   day: "Monday 26th 2022",
     //   reminder: false,
-    //   like: false
     // },
     // {
     //   id: 5,
     //   text: "Running",
     //   day: "Monday 26th 2022",
     //   reminder: false,
-    //   like: false
     // }
   ]);
 
@@ -58,6 +54,7 @@ function App() {
   const addFavTask = (id) =>{
     tasks.map( (task) => !favTask.includes(task) && task.id === id ? 
     setFavTask([...favTask,task]) : "") 
+    setTaskLength(taskLength = favTask.length + 1)
   }
 
   //clearing up favorite tasks
@@ -92,7 +89,8 @@ function App() {
   return (
     <div className='app'>
       <Header  showNav={()=> setNav(!showNav)}/>
-      {showNav ? <Nav showFunc={()=> setForm(!showForm) & setNav(!showNav) }/> : ""}
+      {showNav ? <Nav showFunc={()=> setForm(!showForm) & setNav(!showNav) }
+      taskLength={taskLength}/> : ""}
       {favTask.length > 0 ? <Counter favTasks={favTask} deleteFav={deleteFav}/> : ""}
       {showForm ? <Addtask onAdd={addNewEvent} removeForm={()=> setForm(!showForm)}/> : ''}
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={onDelete} setReminder={setReminder}

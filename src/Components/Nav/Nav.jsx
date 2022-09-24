@@ -8,7 +8,7 @@ import { SiTwitter } from 'react-icons/si'
 import logo from './logo.png'
 
 
-const Nav = ( {showFunc, showNav} ) => {
+const Nav = ( {showFunc, showNav, taskLength} ) => {
   return (
     <div className='nav'>
         <div className='nav-logo'>
@@ -22,6 +22,7 @@ const Nav = ( {showFunc, showNav} ) => {
         <div className='nav-link'>
             <AiFillStar className='icon'/>
             <Button color="green" text="Favorite Tasks" className="nav-button"/>
+            <p className='num'>{taskLength}</p>
         </div>
         <div className='nav-link'>
             <BsFillAlarmFill className='icon'/>
