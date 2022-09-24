@@ -1,11 +1,12 @@
 .count{
-  margin-bottom: 1rem;
-  height: 150px;
+  position: fixed;
+  height: 200px;
+  width: 100%;
   overflow: auto;
-  position: relative;
   box-shadow: 0 0 3px #000;
-  border-bottom: 4px solid green;
   border-radius: 5px;
+  background-color: #5362b2;
+  color: #ffff;
 }
 .count h2{
     text-decoration: underline;
@@ -26,4 +27,9 @@ ul{
 .fav .cancel{
   color: red;
   font-size: 20px;
+}
+.count-cancel{
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
 }

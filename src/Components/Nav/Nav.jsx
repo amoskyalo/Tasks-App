@@ -5,12 +5,17 @@ import { MdOutlinePostAdd } from 'react-icons/md'
 import { AiFillStar } from 'react-icons/ai'
 import { BsFillAlarmFill } from 'react-icons/bs'
 import { SiTwitter } from 'react-icons/si'
+import { ImCancelCircle } from 'react-icons/im'
 import logo from './logo.png'
 
 
-const Nav = ( {showFunc, showNav, taskLength} ) => {
+const Nav = ( {showFunc, taskLength, removeBar, taskCounter, showFav} ) => {
+    taskLength()
   return (
     <div className='nav'>
+        <div className='cancel-icon'>
+            <ImCancelCircle onClick={removeBar}/>
+        </div>
         <div className='nav-logo'>
             <img src={logo} alt="logo img"/>
             <h3>Task <span>Tracker</span></h3>
@@ -21,8 +26,8 @@ const Nav = ( {showFunc, showNav, taskLength} ) => {
         </div>
         <div className='nav-link'>
             <AiFillStar className='icon'/>
-            <Button color="green" text="Favorite Tasks" className="nav-button"/>
-            <p className='num'>{taskLength}</p>
+            <Button color="green" text="Favorite Tasks" className="nav-button" clickFunc={showFav}/>
+            <p className='num'>{taskCounter}</p>
         </div>
         <div className='nav-link'>
             <BsFillAlarmFill className='icon'/>

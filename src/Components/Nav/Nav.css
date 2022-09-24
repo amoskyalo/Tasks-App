@@ -97,3 +97,10 @@
     color: blue;
     font-size: 20px;
 }
+.cancel-icon{
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    font-size: 24px;
+    color: blue;
+}
