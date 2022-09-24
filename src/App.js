@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Header from './Components/Header/Header';
+import Nav from './Components/Nav/Nav';
 import Tasks from './Components/Tasks/Tasks';
 import Addtask from './Components/AddTask/Addtask';
 import Landing from './Components/Loading/Landing';
@@ -8,6 +9,10 @@ import Counter from './Components/Counter/Counter';
 
 
 function App() {
+  //setting up the Nav
+  const [showNav, setNav] = useState(false)
+
+
   //setting state fo the events
   const [tasks, setTasks] = useState([
     // {
@@ -25,7 +30,21 @@ function App() {
     //   like: false
     // },
     // {
+    //   id: 3,
+    //   text: "Running",
+    //   day: "Monday 26th 2022",
+    //   reminder: false,
+    //   like: false
+    // },
+    // {
     //   id: 4,
+    //   text: "Running",
+    //   day: "Monday 26th 2022",
+    //   reminder: false,
+    //   like: false
+    // },
+    // {
+    //   id: 5,
     //   text: "Running",
     //   day: "Monday 26th 2022",
     //   reminder: false,
@@ -72,7 +91,8 @@ function App() {
 
   return (
     <div className='app'>
-      <Header  showFunc={()=> setForm(!showForm)}/>
+      <Header  showNav={()=> setNav(!showNav)}/>
+      {showNav ? <Nav showFunc={()=> setForm(!showForm) & setNav(!showNav) }/> : ""}
       {favTask.length > 0 ? <Counter favTasks={favTask} deleteFav={deleteFav}/> : ""}
       {showForm ? <Addtask onAdd={addNewEvent} removeForm={()=> setForm(!showForm)}/> : ''}
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={onDelete} setReminder={setReminder}
