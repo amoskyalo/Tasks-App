@@ -15,9 +15,11 @@
     font-style: italic;
 }
 ul{
-  padding: 0 0.5rem;
+  padding: 0 1rem 0 1.6rem;
 }
-
+li{
+  border-bottom: 1px solid #525252;
+}
 .fav{
   display: flex;
   justify-content: space-between;
@@ -29,7 +31,8 @@ ul{
   font-size: 20px;
 }
 .count-cancel{
-  position: absolute;
-  left: 0.5rem;
-  top: 0.5rem;
+  position: fixed;
+  left: 0rem;
+  top: 12rem;
+  font-size: 24px;
 }

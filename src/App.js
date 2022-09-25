@@ -22,18 +22,18 @@ function App() {
     tasks.map( (task) => !favTask.includes(task) && task.id === id ? 
     setFavTask([...favTask,task]) : "") 
   }
- 
-  //counter for fav tasks
+
+  // counter for fav tasks
   const taskLengthFunc = () =>{
     setTaskLength( taskLength = favTask.length)
   }
 
-  //setting state for reminder
+  //setting state for fav
   const [favShow, setFav] = useState(false);
   const showFavFunc = () =>{
     setFav(!favShow)
   }
-
+  favShow ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
   //clearing up favorite tasks
   const deleteFav = (id) =>{
     setFavTask(favTask.filter( (fav) => fav.id !== id))
