@@ -6,14 +6,16 @@ import { ImCancelCircle } from 'react-icons/im'
 const Counter = ( {favTasks, deleteFav, cancel} ) => {
   return (
     <div className='count'>
-      <ImCancelCircle className='count-cancel' onClick={cancel}/>
-        <h2>Favorite Tasks</h2>
+        <div className="count-nav">
+          <ImCancelCircle className='count-cancel' onClick={cancel}/>
+          <h2>Favorite Tasks</h2>
+        </div>
+        <ul>
         {favTasks.map( (favTask) => (
-            <ul>
                <li className='fav' key={favTask.id}>{favTask.text} 
                <TiCancel onClick={()=> deleteFav(favTask.id)} className='cancel'/></li>
-            </ul>
         ))}
+        </ul>
     </div>
   )
 }

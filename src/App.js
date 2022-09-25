@@ -16,6 +16,7 @@ function App() {
   //setting state fo the events
   const [tasks, setTasks] = useState([])
 
+
   //setting up favorite tasks
   const [favTask, setFavTask] = useState([]);
   const addFavTask = (id) =>{
@@ -34,6 +35,7 @@ function App() {
     setFav(!favShow)
   }
   favShow ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
+
   //clearing up favorite tasks
   const deleteFav = (id) =>{
     setFavTask(favTask.filter( (fav) => fav.id !== id))

@@ -1,24 +1,47 @@
 .count{
   position: fixed;
-  height: 200px;
+  height: 250px;
   width: 100%;
   overflow: auto;
   box-shadow: 0 0 3px #000;
   border-radius: 5px;
-  background-color: #5362b2;
-  color: #ffff;
+  background-color: #fff;
+  padding: 0;
+  z-index: 99;
+}
+.count-nav{
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 0 3px #525252;
+  position: fixed;
+  top: 12rem;
+  padding: 1.5rem 0;
+  width: 100%;
 }
 .count h2{
-    text-decoration: underline;
     font-size: 18px;
-    text-align: center;
-    font-style: italic;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 7rem;
+    color: blue;
+}
+.count-cancel{
+  position: absolute;
+  left: 0.5rem;
+  color: blue;
 }
 ul{
-  padding: 0 1rem 0 1.6rem;
+  padding: 0 0.5rem;
+  margin-top: 3.5rem;
 }
 li{
   border-bottom: 1px solid #525252;
+  font-size: 20px;
+  font-style: italic;
+  border-radius: 5px;
+  padding: 0.5rem 0.5rem;
 }
 .fav{
   display: flex;
@@ -29,10 +52,4 @@ li{
 .fav .cancel{
   color: red;
   font-size: 20px;
-}
-.count-cancel{
-  position: fixed;
-  left: 0rem;
-  top: 12rem;
-  font-size: 24px;
 }
